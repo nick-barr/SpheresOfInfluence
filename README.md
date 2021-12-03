@@ -1,4 +1,6 @@
 Background
+==========
+
 Conway's Game of Life is a classic example of the concept of cellular automata. The original GoL plays out on a rectangular grid. Each cell on the grid is either dead or alive when the game begins. On the next iteration of the game (called a "generation") the cells follow these rules:
 
 1) Any live cell with exactly 2 or 3 live neighbors* stays alive; otherwise, it dies 2) Any dead cell with exactly 3 neighbors will come to life; otherwise, it remains dead
