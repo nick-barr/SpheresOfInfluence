@@ -26,7 +26,7 @@ Users widget like trackers, users will also be able to:
 
 Wireframes
 ==========
-TBD
+![alt text](https://github.com/nick-barr/jsProjectCovid/src\assets\wireframes\wireframev1.png?raw=true)
 
 Technologies, Libraries, APIs
 =============================
