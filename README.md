@@ -13,19 +13,16 @@ With this simluation, users will be able to:
 * Start and reset the simulation
 * Add labeled markers to mark patient zero, yourself, and other persons of interest
 * Change the % of objects moving vs static
-* Add / draw structures to limit the movement of objects
-* Change the virality of objects (not all objects change when collision occurs)
 * Toggle the immunized status of individual objects
-* Change the speed of moving objects
 
 Using widget like trackers, users will also be able to:
 
-* View a running area graph of the current simluation state
 * View a live tracker counting the status of objects in the canvas (not infected/immunized/dead, etc.)
 * Maintain a log of status events
 
 Wireframes
 ==========
+
 ![alt text](https://github.com/nick-barr/jsProjectCovid/blob/main/src/assets/wireframes/wireframev1.png)
 
 Technologies, Libraries, APIs
@@ -50,6 +47,17 @@ Tuesday: Do the features & styling
 Wednesday: Finish implementing user features and focus on styling, as well as implementing the different color schemes and nav links.
 
 Thursday Morning: Deploy to GitHub pages. If time, rewrite this proposal as a production README.
+
+Bonus Features
+==============
+
+To be included time permitting:
+
+* Add / draw structures to limit the movement of objects
+* Change the speed of moving objects
+* Change the virality of objects (not all objects change when collision occurs)
+* View a running area graph of the current simluation state
+
 
 /*
 Personal Notes
