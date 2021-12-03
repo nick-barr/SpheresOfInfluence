@@ -1,9 +1,9 @@
-Background
+Spheres of Influence: Background
 ==========
 
-This data simulation is meant to visualize how quickly anything that is viral can spread. As social beings, the extent that we reach one another is typically larger than one would expect. This simluation aims to ultimately help with visualizing what how our daily decisions affect the environment around us. Note that this is not a political statement but a demonstration of our spheres of influence.
+This data simulation is meant to visualize anything viral can spread. As social beings, the extent that we reach one another is typically larger than one would expect. This simluation aims to ultimately help with visualizing how our daily decisions affect the environment around us. Note that this is not a political statement but a demonstration of our spheres of influence.
 
-The first iteration of this project will focus on how quickly a virus can spread. There will several moving objects on a given canvas. All objects will start out as neutral. One object will be added that represents patient zero. When this object collides with other objects, it will influencing that objectby either infecting it or not. After a period of time, the status of influenced objects will change to immunized or dead.
+The first iteration of this project will focus on how quickly a virus can spread. There will several moving objects on a given canvas. All objects will start out as neutral. One object will be added that represents patient zero. When this object collides with other objects, it will influence that object by either infecting it or not. After a period of time, the status of influenced objects will change to immunized or dead.
 
 Functionality & MVPs
 ====================
@@ -12,17 +12,17 @@ With this simluation, users will be able to:
 
 * Start and reset the simulation
 * Add labeled markers to mark patient zero, yourself, and other persons of interest
-* Change % of objects moving vs static
+* Change the % of objects moving vs static
 * Add / draw structures to limit the movement of objects
 * Change the virality of objects (not all objects change when collision occurs)
-* Toggle immunized status of individual objects
+* Toggle the immunized status of individual objects
 * Change the speed of moving objects
 
-Users widget like trackers, users will also be able to:
+Using widget like trackers, users will also be able to:
 
 * View a running area graph of the current simluation state
-* View a live tracker of current simulation state (not infected/immunized/dead, etc.)
-* Maintain a log of status updates on dangers within a given radius
+* View a live tracker counting the status of objects in the canvas (not infected/immunized/dead, etc.)
+* Maintain a log of status events
 
 Wireframes
 ==========
