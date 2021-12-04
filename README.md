@@ -1,7 +1,7 @@
 Spheres of Influence: Background
 ==========
 
-This data simulation is meant to visualize anything viral can spread. As social beings, the extent that we reach one another is typically larger than one would expect. This simluation aims to ultimately help with visualizing how our daily decisions affect the environment around us. Note that this is not a political statement but a demonstration of our spheres of influence.
+This data simulation is meant to visualize how anything viral can spread. As social beings, the extent that we reach one another is typically larger than one would expect. This simluation aims to ultimately help with visualizing how our daily decisions affect the environment around us. Note that this is not a political statement but a demonstration of our spheres of influence.
 
 The first iteration of this project will focus on how quickly a virus can spread. There will several moving objects on a given canvas. All objects will start out as neutral. One object will be added that represents patient zero. When this object collides with other objects, it will influence that object by either infecting it or not. After a period of time, the status of influenced objects will change to immunized or dead.
 
