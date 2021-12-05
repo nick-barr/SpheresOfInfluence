@@ -1,28 +1,10 @@
 const Spheres = require("./spheres");
 
 document.addEventListener("DOMContentLoaded", function () {
-    const mainCanv = document.querySelector(".canvasMain");
-    const width = mainCanv.width = 900;
-    const height = mainCanv.height = 450;
-    
-    const circle = mainCanv.getContext("2d");
-    // //order of operations are important. Need to define the arc before filling it. Stroke will close whatever this is defining
-
-    //single circle
-        // circle.beginPath();
-        // circle.arc(100, 100, 5, 0, 2*Math.PI);
-        // circle.fillStyle = "red";
-        // circle.fill();
-        // circle.stroke;
-
-    //many circles
-    // for (let i = 0; i < 300; i++){
-    //     circle.beginPath();
-    //     circle.arc(Math.random() * 600, Math.random() * 300, 5, 0, 2*Math.PI);
-    //     circle.fillStyle = "green";
-    //     circle.fill();
-    //     circle.stroke;
-    // }
+    const canvasMain = document.querySelector(".canvasMain");
+    const width = canvasMain.width = 900;
+    const height = canvasMain.height = 450;
+    const circle = canvasMain.getContext("2d");
 
     function Circ(x, y, dx, dy, radius) {
         this.x = x;
@@ -30,11 +12,12 @@ document.addEventListener("DOMContentLoaded", function () {
         this.dx = dx;
         this.dy = dy;
         this.radius = radius;
+        this.color = "green";
 
         this.draw = function() {
             circle.beginPath();
             circle.arc(this.x, this.y, this.radius, 0, 2*Math.PI);
-            circle.fillStyle = "blue";
+            circle.fillStyle = this.color;
             circle.fill();    
         }
 
@@ -51,30 +34,37 @@ document.addEventListener("DOMContentLoaded", function () {
     
     const circleArray = [];
 
-    for (let i = 0; i < 50; i++){
-        let radius = Math.random() * 20;
+    for (let i = 0; i < 400; i++){
+        let radius = Math.random() * 5 + 5;
         let x = Math.random() *  (width - radius * 2) + radius;
         let y = Math.random() * (height - radius * 2) + radius
         let dx = (Math.random() - 0.5) * 5;
         let dy = (Math.random() - 0.5) * 5;
         circleArray.push(new Circ(x, y, dx, dy, radius));
     }
-    // let dx = Math.ceil(Math.random() * 199) * (Math.round(Math.random()) ? 1 : -1) / 10;
-    // let dy = Math.ceil(Math.random() * 199) * (Math.round(Math.random()) ? 1 : -1) / 10;
-    
 
     function animate () {
         requestAnimationFrame(animate);
         circle.clearRect(0, 0, innerWidth, innerHeight);
-        
-        circleArray.forEach(el =>
-            el.update()
-            );
+        circleArray.forEach(el => el.update());
 
+        const COLORS = ["firebick", "darkcyan"]
+
+        circleArray.forEach(el => {
+            if (el.x + el.radius > width) {el.color = "red"}
+            else if (el.x - el.radius < 0) {el.color = "green"}
+            else if (el.y + el.radius > height) {el.color = "blue"}
+            else if (el.y - el.radius < 0) {el.color = "grey"}
+            // if (el.x + el.radius > width
+            //     || el.x - el.radius < 0
+            //     || el.y + el.radius > height
+            //     || el.y - el.radius < 0) 
+            //     {el.dx *= 1.5
+            //     el.dy *= 5}
+            }
+        );
     }
 
     animate ();
-
-
 
 });
