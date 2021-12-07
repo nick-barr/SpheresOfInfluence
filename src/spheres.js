@@ -28,12 +28,22 @@ export default function Sphere(x, y, dx, dy, radius, canvas) {
 
         for (let i = 0; i < arr.length; i++) {
             if (this === arr[i]) continue;
-            if (distance(this.x, this.y, arr[i].x, arr[i].y) - radius * 2 < 0) {
+            if (distance(this.x, this.y, arr[i].x, arr[i].y) - this.radius - arr[i].radius < 0) {
                 // console.log("collision")
                 // this.dx = -this.dx
                 // this.dy = -this.dy
-                resolveCollision(this, arr[i])
+                resolveCollision(this, arr[i]);
+
+                if (this.color === "firebrick" && arr[i].color !== "firebrick") {
+                    this.color = "firebrick";
+                    arr[i].color = "firebrick";
+                }
+                if (this.color === "blue" && arr[i].color !== "blue") {
+                    this.color = "blue";
+                    arr[i].color = "blue";
+                }
             }
+
         }
 
         if (this.x + this.radius > this.canvas.width || this.x - this.radius < 0) this.dx = -this.dx;

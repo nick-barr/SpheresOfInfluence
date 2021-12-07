@@ -14,14 +14,14 @@ export default function Simulation(canvas) {
             return Math.sqrt(Math.pow(xDist, 2) + Math.pow(yDist, 2));
         }
         
-        for (let i = 0; i < 200; i++){
+        for (let i = 0; i < 100; i++){
 
             // let radius = Math.random() * 5 + 5;
-            let radius = 5;
+            let radius = 7;
             let x = Math.random() *  (this.canvas.width - radius * 2) + radius;
             let y = Math.random() * (this.canvas.height - radius * 2) + radius;
-            let dx = (Math.random() - 0.5) * 5;
-            let dy = (Math.random() - 0.5) * 5;
+            let dx = (Math.random() - 0.5) * 2.5;
+            let dy = (Math.random() - 0.5) * 2.5;
 
             if (i !== 0) {
                 for (let j = 0; j < sphereArray.length; j++) {
@@ -37,6 +37,11 @@ export default function Simulation(canvas) {
             sphereArray.push(new Sphere(x, y, dx, dy, radius, this.canvas));
         }
 
+        sphereArray[0].color = "firebrick";
+        sphereArray[0].radius = 30;
+        sphereArray[1].color = "blue";
+        sphereArray[1].radius = 30;
+
         return sphereArray;
     }
     
@@ -44,17 +49,21 @@ export default function Simulation(canvas) {
     Simulation.prototype.run = function (arr) {
         
         arr.forEach(el => {el.update(arr)});
+        // arr.forEach(el => {
+        //     if (el.color === "firebrick") {
+        //         setTimeout(function(){ el.color = "blue"}, 3000);
+        //         });
         
-        const COLORS = ["firebrick", "darkcyan", "green", "lime", "olive", "aquamarine", "bisque", "coral", "deeppink", "gold", "lightcoral", "lightgreen", "lightgray", "lightslategray", "springgreen", "tomato", "slateblue"]
+        // const COLORS = ["firebrick", "darkcyan", "green", "lime", "olive", "aquamarine", "bisque", "coral", "deeppink", "gold", "lightcoral", "lightgreen", "lightgray", "lightslategray", "springgreen", "tomato", "slateblue"]
 
-        arr.forEach(el => {
-            if (el.x + el.radius > this.canvas.width
-                || el.x - el.radius < 0
-                || el.y + el.radius > this.canvas.height
-                || el.y - el.radius < 0) 
-                {el.color = COLORS[Math.floor(Math.random()*COLORS.length)];}
-            }
-        );   
+        // arr.forEach(el => {
+        //     if (el.x + el.radius > this.canvas.width
+        //         || el.x - el.radius < 0
+        //         || el.y + el.radius > this.canvas.height
+        //         || el.y - el.radius < 0) 
+        //         {el.color = COLORS[Math.floor(Math.random()*COLORS.length)];}
+        //     }
+        // );   
     }
 
     // window.addEventListener("click", function(event) {

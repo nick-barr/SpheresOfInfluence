@@ -17,5 +17,11 @@ I used inspiration from asteroids and pathfinder to pull this together.
 - Updated the canvas so that it dynamically changes when refreshing with the screen size
 
 (Monday 12/06/21)
-- Separated out modules into Sphere and Simulation. Updated to ES6 syntax for import / export
-- Added canvas to Sphere to fix radius and
+- Separated out modules into Sphere and Simulation. Updated to ES6 syntax for import / export 
+- Added canvas to Sphere to fix radius issue.
+- Spheres will no longer spawn on top of each other.
+- Collision detection added ensuring individual spheres will not bump into each other.
+
+(Tuesday 12/07/21)
+
+Use a counter based on the frames (60FPS) and then update what you want to change based on that
