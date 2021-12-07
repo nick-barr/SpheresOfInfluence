@@ -24,4 +24,4 @@ I used inspiration from asteroids and pathfinder to pull this together.
 
 (Tuesday 12/07/21)
 
-Use a counter based on the frames (60FPS) and then update what you want to change based on that
+- Use a counter based on the frames (60FPS) and then update what you want to change based on that

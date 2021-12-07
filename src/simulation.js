@@ -14,7 +14,7 @@ export default function Simulation(canvas) {
             return Math.sqrt(Math.pow(xDist, 2) + Math.pow(yDist, 2));
         }
         
-        for (let i = 0; i < 100; i++){
+        for (let i = 0; i < 110; i++){
 
             // let radius = Math.random() * 5 + 5;
             let radius = 7;
@@ -37,10 +37,14 @@ export default function Simulation(canvas) {
             sphereArray.push(new Sphere(x, y, dx, dy, radius, this.canvas));
         }
 
+        //covid
         sphereArray[0].color = "firebrick";
-        sphereArray[0].radius = 30;
-        sphereArray[1].color = "blue";
-        sphereArray[1].radius = 30;
+
+        //politics
+        // sphereArray[0].color = "firebrick";
+        // sphereArray[0].radius = 30;
+        // sphereArray[1].color = "blue";
+        // sphereArray[1].radius = 30;
 
         return sphereArray;
     }
@@ -50,9 +54,9 @@ export default function Simulation(canvas) {
         
         arr.forEach(el => {el.update(arr)});
         // arr.forEach(el => {
-        //     if (el.color === "firebrick") {
-        //         setTimeout(function(){ el.color = "blue"}, 3000);
-        //         });
+            // if (el.color === "firebrick") {
+            //     setTimeout(function(){ el.color = "blue"}, 3000);
+            //     });
         
         // const COLORS = ["firebrick", "darkcyan", "green", "lime", "olive", "aquamarine", "bisque", "coral", "deeppink", "gold", "lightcoral", "lightgreen", "lightgray", "lightslategray", "springgreen", "tomato", "slateblue"]
 
@@ -74,3 +78,7 @@ export default function Simulation(canvas) {
     // }) /// just adds a box when it clicks TEST FOR WHERE I AM CLICKING?
 
     // fetch('url/?')
+
+    // try a promise
+
+    //maybe if I change the color using a function the I 
