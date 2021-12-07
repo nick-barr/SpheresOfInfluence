@@ -15,4 +15,7 @@ I used inspiration from asteroids and pathfinder to pull this together.
 (Sunday 12/05/21)
 - Played around with different attributes (radius, dx/dy, colors) within the forEach loop that updates based on hitting the borders of the canvas 
 - Updated the canvas so that it dynamically changes when refreshing with the screen size
-- 
+
+(Monday 12/06/21)
+- Separated out modules into Sphere and Simulation. Updated to ES6 syntax for import / export
+- Added canvas to Sphere to fix radius and

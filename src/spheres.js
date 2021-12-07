@@ -25,5 +25,3 @@ export default function Sphere(x, y, dx, dy, radius, canvas) {
         this.draw();
     }
 }
-
-// module.exports = Sphere;
