@@ -14,7 +14,7 @@ export default function Simulation(canvas) {
             return Math.sqrt(Math.pow(xDist, 2) + Math.pow(yDist, 2));
         }
         
-        for (let i = 0; i < 110; i++){
+        for (let i = 0; i < 120; i++){
 
             // let radius = Math.random() * 5 + 5;
             let radius = 7;
@@ -39,6 +39,8 @@ export default function Simulation(canvas) {
 
         //covid
         sphereArray[0].color = "firebrick";
+        setTimeout(sphereArray[0].recover.bind(sphereArray[0]), 10000);
+
 
         //politics
         // sphereArray[0].color = "firebrick";
@@ -52,7 +54,7 @@ export default function Simulation(canvas) {
     
     Simulation.prototype.run = function (arr) {
         
-        arr.forEach(el => {el.update(arr)});
+        arr.forEach(el => {el.updateCovid(arr)});
         // arr.forEach(el => {
             // if (el.color === "firebrick") {
             //     setTimeout(function(){ el.color = "blue"}, 3000);

@@ -7,38 +7,53 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./dist/main.css" />
     <title>Javascript Project: Spheres of Influence</title>
-    <h1>Spheres of Influence</h1>
 </head>
 
 <body>
     <script src="./dist/main.js"></script>
-    <!-- <p id="intro">This is a data simulation meant to visualize how closely connected we are to one another. Individuals can reach farther than the immediate surrounding they interact with. While this particular simulation is an example of COVID-19, this also a visual metaphor representing ideas and how our interactions reach one another. Ultimately, I hope this demonstration gives you an understanding of our own sphere of influence.</p> -->
-    <p id="intro">beepboop intro text</p>
     <canvas class="canvasMain" id="canvas"></canvas>
-
-    <ul id="features">
-        <button>Add Markers</button><br><br>
-        <button>Quarantine</button><br><br>
-        <button>Add Immunity</button><br><br>
-        <button>TBD</button><br><br>
-    </ul>
-
-    <ul id="controls">
-        <button>Simulation Start</button><br><br>
-        <button>Simulation Reset</button><br><br>
-    </ul>
-
-    <p>This will be the feed</p>
-
-    <ul id="tracker">
-        <li>Uninfected</li>
-        <li>Infected</li>
-        <li>Recovered</li>
-        <li>Immunized</li>
-    </ul>
     
-    <p>This will be the event feed</p>
-    <p>This will be the event feed</p>
+    <div>
+        <h1>Spheres of Influence</h1>
+        <hr id="hr1">
+        <p id="intro">This is a data simulation meant to visualize how closely connected we are to one another. Individuals can reach farther than the immediate surrounding they interact with. While this particular simulation is an example of COVID-19, this also a visual metaphor representing ideas and how our interactions reach one another. Ultimately, I hope this demonstration gives you an understanding of our own sphere of influence.</p>
+        <hr id="hr2">
+        <h3>Controls</h3>
+
+        <ul id="features">
+            <button id="simStart">Simulation Start</button><br><br>
+            <button id="simReset">Simulation Reset</button><br><br>
+            <button>COVID-19</button><br><br>
+            <button id="quarantine">COVID-19: Quarantine</button><br><br>
+            <button>Political Influence</button><br><br>
+            <button>Ideas</button><br><br>
+        </ul>
+
+        
+        <ul id="tracker">
+            <li id="uninfected">Uninfected</li>
+            <li id="infected">Infected</li>
+            <li id="recovered">Recovered</li>
+            <li id="immunized">Immunized</li>
+        </ul>
+        
+        <!-- <p>This will be the feed</p> -->
+        <!-- <p>This will be the event feed</p> -->
+        <!-- <p>This will be the event feed</p> -->
+    </div>
 </body>
+
+<footer>
+    <a href="https://www.linkedin.com/in/nicholas-barrameda/">
+        <img alt="MyLinkedIn" src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+        width="50" height="50">
+    </a>
+    <br>
+    <a href="https://github.com/nick-barr/">
+        <img alt="MyGitHub" src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+        width="50" height="50">
+    </a>
+    <br>
+</footer>
 
 </html>

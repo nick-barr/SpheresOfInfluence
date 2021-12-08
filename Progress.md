@@ -24,4 +24,13 @@ I used inspiration from asteroids and pathfinder to pull this together.
 
 (Tuesday 12/07/21)
 
-- Use a counter based on the frames (60FPS) and then update what you want to change based on that
+- Use a counter based on the color of the sphere that updated with the animation FPS. Did not work at scale.
+- Added setTimeout for infected spheres to recover
+- Simulations end when all balls become infected or recovered
+- Added three scenarios; politics, covid, ideas
+- Added non-functioniing options file
+- Added CSS elements (buttons, left nav bar to house all interactive elements)
+
+(Wednesday 12/08/21)
+
+- Updated CSS further
