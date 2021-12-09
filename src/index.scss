@@ -6,6 +6,8 @@ body {
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    animation: fadeIn linear 500ms;
+    -webkit-animation: fadeIn linear 500ms;
 
 }
 
@@ -19,23 +21,34 @@ h1 {
     
     font-family: Helvetica;
     font-style: normal;
-    font-weight: normal;
+    font-weight: bold;
     font-size: 60px;
     line-height: 69px;
     z-index: 1;
     color: #ffffff;
+    animation: fadeIn linear 2;
+    -webkit-animation: fadeIn linear 2s;
 }
+    @keyframes fadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
+      }
+      
+      @-webkit-keyframes fadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
+      }
 
 h3 {
     position: absolute;
     width: 413px;
     height: 28px;
     left: 46px;
-    top: 470px;
+    top: 485px;
 
     font-family: Helvetica;
     font-style: normal;
-    font-weight: normal;
+    font-weight: bold;
     font-size: 24px;
     line-height: 28px;
 
@@ -56,13 +69,13 @@ h3 {
     width: 383px;
     height: 0px;
     left: 46px;
-    top: 520px;
+    top: 540px;
 
     border: 1px solid #FFFFFF;
 }
 
 
-p {
+#intro {
     position: absolute;
     width: 380px;
     height: 171px;
@@ -71,21 +84,74 @@ p {
     
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-style: normal;
-    font-weight: normal;
+    font-weight: light;
     font-size: 16px;
     line-height: 19px;
     
     color: #FFFFFF;
 }   
+#description {
+    position: absolute;
+    width: 380px;
+    height: 171px;
+    left: 46px;
+    top: 390px;
+    
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight:normal;
+    font-size: 16px;
+    line-height: 19px;
+    
+    color: #FFFFFF;
+    animation: fadeIn linear 2;
+    -webkit-animation: fadeIn linear 2s;
+}   
 
-#canvas {
+#tracker {
+    list-style-type: none;
+    width: 200px;
+    position: absolute;
+    left: 465px;
+    // top: 142px;
+    top: 10vh;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight:600;
+    line-height: 19px;
+    color: #616161;
+    #uninfected {
+        color:gray;
+    }
+    #infected {
+        color: firebrick;
+    }
+    #recovered {
+        color: green;
+    }
+}
+
+.canvasMain {
     position: absolute;
     // width: 75vh;
     // height: 502px;
-    left: 500px;
+    left: 545px;
     top: 20vh;
-    
+    border-style: solid;
+    border-color: lightgray;
     background: #ffffff93;
+}
+
+#active {
+    opacity: 1;
+    animation: fadeIn linear 2000ms;
+    -webkit-animation: fadeIn linear 2000ms;
+}
+
+#inactive {
+    opacity: .2;
+    // animation: fadeIn linear 2000ms;
+    // -webkit-animation: fadeIn linear 2000ms;    
 }
 
 
@@ -95,6 +161,8 @@ ul {
     height: 19px;
     left: 46px;
     top: 571px;
+    padding-bottom: 25px;
+
     
     font-family: Roboto;
     font-style: normal;
@@ -104,22 +172,18 @@ ul {
     color: #FFFFFF;
 }
 
-#tracker {
-    list-style-type: none;
-    width: 200px;
-    position: absolute;
-    left: 470px;
-    top: 115px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 16px;
-    line-height: 19px;
-    color: #616161;
-}
+
 
 li {
     margin: 3px;
 }
 
+#simStart{
+    background-color: #15772ef1;
+}
+#simReset{
+    background-color: #a51515f1;
+}
 button {
     box-shadow: 2px 3px #888888;
     background-color: #550077f1;
@@ -160,4 +224,6 @@ div {
     border-radius: 0px;
     z-index:3;
 }
+
+
 

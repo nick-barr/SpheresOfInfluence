@@ -11,35 +11,32 @@
 
 <body>
     <script src="./dist/main.js"></script>
-    <canvas class="canvasMain" id="canvas"></canvas>
+    <canvas class="canvasMain" id="inactive"></canvas>
     
     <div>
         <h1>Spheres of Influence</h1>
         <hr id="hr1">
-        <p id="intro">This is a data simulation meant to visualize how closely connected we are to one another. Individuals can reach farther than the immediate surrounding they interact with. While this particular simulation is an example of COVID-19, this also a visual metaphor representing ideas and how our interactions reach one another. Ultimately, I hope this demonstration gives you an understanding of our own sphere of influence.</p>
+        <p id="intro">This is a data simulation meant to visualize how closely connected we are to one another. Individuals can reach farther than the immediate surrounding they interact with. This simlulation gives a few examples of how our interactions reach one another. Ultimately, I hope this demonstration gives you an understanding of our own sphere of influence.</p>
+        <p id="description"></p>
         <hr id="hr2">
-        <h3>Controls</h3>
+        <h3>Scenarios</h3>
 
         <ul id="features">
-            <button id="simStart">Simulation Start</button><br><br>
-            <button id="simReset">Simulation Reset</button><br><br>
-            <button>COVID-19</button><br><br>
-            <button id="quarantine">COVID-19: Quarantine</button><br><br>
-            <button>Political Influence</button><br><br>
-            <button>Ideas</button><br><br>
+            <button id="covid">COVID-19</button><br><br>
+            <button id="quarantine">COVID-19: Lockdown</button><br><br>
+            <button id="political">Political Influence</button><br><br>
+            <button id="ideas">Ideas</button><br><br>
+            <button id="simStart">Start / Speed Up</button><br><br>
+            <button id="simReset">Pause / Slowdown</button><br><br>
         </ul>
 
         
         <ul id="tracker">
-            <li id="uninfected">Uninfected</li>
-            <li id="infected">Infected</li>
-            <li id="recovered">Recovered</li>
-            <li id="immunized">Immunized</li>
+            <li id="uninfected"></li>
+            <li id="infected"></li>
+            <li id="recovered"></li>
         </ul>
         
-        <!-- <p>This will be the feed</p> -->
-        <!-- <p>This will be the event feed</p> -->
-        <!-- <p>This will be the event feed</p> -->
     </div>
 </body>
 

@@ -55,42 +55,41 @@ export default class Sphere {
     }
 
     Sphere.prototype.recover = function () {
-        this.color = "#6ed877";
+        this.color = "lightgreen";
     }
 
-    // Sphere.prototype.updatePoliticalParties = function(arr) {
-    //     function distance(x1, y1, x2, y2) {
-    //         const xDist = x2 - x1;
-    //         const yDist = y2 - y1;
+    Sphere.prototype.updatePoliticalParties = function(arr) {
+        function distance(x1, y1, x2, y2) {
+            const xDist = x2 - x1;
+            const yDist = y2 - y1;
 
-    //         return Math.sqrt(Math.pow(xDist, 2) + Math.pow(yDist, 2));
-    //     }
+            return Math.sqrt(Math.pow(xDist, 2) + Math.pow(yDist, 2));
+        }
 
-    //     for (let i = 0; i < arr.length; i++) {
-    //         if (this === arr[i]) continue;
-    //         if (distance(this.x, this.y, arr[i].x, arr[i].y) - this.radius - arr[i].radius < 0) {
-    //             resolveCollision(this, arr[i]);
+        for (let i = 0; i < arr.length; i++) {
+            if (this === arr[i]) continue;
+            if (distance(this.x, this.y, arr[i].x, arr[i].y) - this.radius - arr[i].radius < 0) {
+                resolveCollision(this, arr[i]);
+                if (this.radius === 30 && arr[i].radius === 30) continue;
+                if (this.color === "darkred" && arr[i].color !== "darkred") {
+                    arr[i].color = "firebrick";}
+                if (this.color !== "darkred" && arr[i].color === "darkred") {
+                    this.color = "firebrick";}
+                if (this.color === "darkblue" && arr[i].color !== "darkblue") {
+                    arr[i].color = "blue";}
+                if (this.color !== "darkblue" && arr[i].color === "darkblue") {
+                    this.color = "blue";}
+            }
+        }
 
-    //             if (this.color === "firebrick" && arr[i].color !== "firebrick") {
-    //                 arr[i].color = "firebrick";}
-    //             if (this.color !== "firebrick" && arr[i].color === "firebrick") {
-    //                 this.color = "firebrick";}
-    //             if (this.color === "blue" && arr[i].color !== "blue") {
-    //                 arr[i].color = "blue";}
-    //             if (this.color !== "blue" && arr[i].color === "blue") {
-    //                 this.color = "blue";}
-    //         }
-            
-    //     }
+        if (this.x + this.radius > this.canvas.width || this.x - this.radius < 0) this.dx = -this.dx;
+        if (this.y + this.radius > this.canvas.height || this.y - this.radius < 0) this.dy = -this.dy;
 
-    //     if (this.x + this.radius > this.canvas.width || this.x - this.radius < 0) this.dx = -this.dx;
-    //     if (this.y + this.radius > this.canvas.height || this.y - this.radius < 0) this.dy = -this.dy;
+        this.x += this.dx;
+        this.y += this.dy;
 
-    //     this.x += this.dx;
-    //     this.y += this.dy;
-
-    //     this.draw();
-    // }
+        this.draw();
+    }
 
     Sphere.prototype.updateIdeas = function(arr) {
         const COLORS = ["firebrick", "darkcyan", "green", "lime", "olive", "aquamarine", "bisque", "coral", "deeppink", "gold", "lightcoral", "lightgreen", "lightgray", "lightslategray", "springgreen", "tomato", "slateblue"];
@@ -103,33 +102,50 @@ export default class Sphere {
         } 
 
         for (let i = 0; i < arr.length; i++) {
-            if (arr[i].x + arr[i].radius > this.canvas.width
-                || arr[i].x - arr[i].radius < 0
-                || arr[i].y + arr[i].radius > this.canvas.height
-                || arr[i].y - arr[i].radius < 0) 
-                {el.color = COLORS[Math.floor(Math.random()*COLORS.length)];}
+            // if (arr[i].x + arr[i].radius > this.canvas.width
+            //     || arr[i].x - arr[i].radius < 0
+            //     || arr[i].y + arr[i].radius > this.canvas.height
+            //     || arr[i].y - arr[i].radius < 0) 
+            //     {arr[i].color = COLORS[Math.floor(Math.random()*COLORS.length)];}
 
             if (this === arr[i]) continue;
             if (distance(this.x, this.y, arr[i].x, arr[i].y) - this.radius - arr[i].radius < 0) {
                 resolveCollision(this, arr[i]);
-
-                if (this.color === "firebrick" && arr[i].color !== "firebrick") {
-                    arr[i].color = "firebrick";}
-                if (this.color !== "firebrick" && arr[i].color === "firebrick") {
-                    this.color = "firebrick";}
-                if (this.color === "blue" && arr[i].color !== "blue") {
-                    arr[i].color = "blue";}
-                if (this.color !== "blue" && arr[i].color === "blue") {
-                    this.color = "blue";}
+                let thisIdea = COLORS[Math.floor(Math.random()*COLORS.length)];
+                this.color = thisIdea;
+                arr[i].color = thisIdea;
+                if (Math.random() * 10 > 5) {
+                    arr[i].radius += .2;
+                } else {
+                    arr[i].raidus -= .2;
+                }
+                // if (this.color === "firebrick" && arr[i].color !== "firebrick") {
+                //     arr[i].color = "firebrick";}
+                // if (this.color !== "firebrick" && arr[i].color === "firebrick") {
+                //     this.color = "firebrick";}
+                // if (this.color === "blue" && arr[i].color !== "blue") {
+                //     arr[i].color = "blue";}
+                // if (this.color !== "blue" && arr[i].color === "blue") {
+                //     this.color = "blue";}
             }
         }
 
         if (this.x + this.radius > this.canvas.width || this.x - this.radius < 0) this.dx = -this.dx;
         if (this.y + this.radius > this.canvas.height || this.y - this.radius < 0) this.dy = -this.dy;
 
+        if (this.x + this.radius > this.canvas.width 
+            || this.x - this.radius < 0
+            || this.y + this.radius > this.canvas.height 
+            || this.y - this.radius < 0) {
+            this.color = COLORS[Math.floor(Math.random()*COLORS.length)]};
         this.x += this.dx;
         this.y += this.dy;
 
         this.draw();
+    }
+
+    Sphere.prototype.covidSphereUpdate = function (arr) {
+        arr[0].color = "firebrick";
+        setTimeout(arr[0].recover.bind(arr[0]), 10000);
     }
 

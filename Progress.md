@@ -34,3 +34,4 @@ I used inspiration from asteroids and pathfinder to pull this together.
 (Wednesday 12/08/21)
 
 - Updated CSS further
+- Split animate function, simulation run, and sphere update functions into their own functions.
