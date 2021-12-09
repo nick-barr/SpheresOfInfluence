@@ -59,7 +59,7 @@ export default function Simulation(canvas) {
 
     Simulation.prototype.quarantineSphereUpdate = function (arr) {
         arr.forEach(el => {
-            if (el !== arr[0] && Math.random() * 100 < 80) {
+            if (el !== arr[0] && Math.random() * 100 < 90) {
                 el.dx = 0;
                 el.dy = 0;
             }

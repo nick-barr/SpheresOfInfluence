@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let uninfected = 0
     let infected = 0
     let recovered = 0
-    let simVersion = null;
+    let simVersion = canvasMain;
 
     function animate() {
         let requestID = requestAnimationFrame(animateCovid);
@@ -39,11 +39,17 @@ document.addEventListener("DOMContentLoaded", function () {
         sim.runCovid(sphereArray);   
              
         // if (sphereArray.every(el => el.color === "firebrick")) cancelAnimationFrame(requestID);
-        // if (sphereArray.every(el => el.color !== "firebrick")) cancelAnimationFrame(requestID);
+        if (sphereArray.every(el => el.color !== "firebrick")) reset();
 
-        document.getElementById("simReset").onclick = function() {
+
+        function reset() {
             document.getElementById("active").id = "inactive";
+            cancelAnimationFrame(requestID)
+        }
+        
+        document.getElementById("simReset").onclick = function() {
             cancelAnimationFrame(requestID);
+            document.getElementById("active").id = "inactive";
         };    
         
         stats();
@@ -88,9 +94,6 @@ document.addEventListener("DOMContentLoaded", function () {
         ctx.clearRect(0, 0, innerWidth, innerHeight);
         sim.runIdeas(sphereArray);   
              
-        // if (sphereArray.every(el => el.color === "firebrick")) cancelAnimationFrame(requestID);
-        // if (sphereArray.every(el => el.color !== "firebrick")) cancelAnimationFrame(requestID);
-
         document.getElementById("simReset").onclick = function() {
             cancelAnimationFrame(requestID);
             document.getElementById("active").id = "inactive";

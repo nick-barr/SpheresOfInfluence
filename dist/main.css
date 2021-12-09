@@ -139,12 +139,32 @@ h3 {
 
 #active {
   opacity: 1;
-  animation: fadeIn linear 2000ms;
-  -webkit-animation: fadeIn linear 2000ms;
+  animation: fadeIn linear 1000ms;
+  -webkit-animation: fadeIn linear 1000ms;
 }
 
 #inactive {
-  opacity: 0.2;
+  opacity: 0.5;
+}
+
+#invisible {
+  opacity: 0;
+}
+
+.floatreset {
+  position: absolute;
+  top: 550px;
+  left: 1180px;
+}
+
+p.floatreset {
+  position: absolute;
+  display: inline-block;
+  font-family: helvetica;
+  top: 590px;
+  left: 1170px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 ul {
@@ -206,7 +226,7 @@ a {
 div {
   position: absolute;
   width: 490px;
-  height: 100vh;
+  height: 1200px;
   left: 0px;
   top: 0px;
   background: linear-gradient(107.86deg, #622774 1.88%, #C53364 100%);
