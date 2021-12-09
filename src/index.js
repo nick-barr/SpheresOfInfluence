@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let uninfected = 0
     let infected = 0
     let recovered = 0
-    let simVersion = canvasMain;
+    let simVersion = console.log("Choose a scenario!");
 
     function animate() {
         let requestID = requestAnimationFrame(animateCovid);
