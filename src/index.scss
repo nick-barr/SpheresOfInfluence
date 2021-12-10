@@ -117,8 +117,7 @@ p.scen {
     line-height: 19px;
     
     color: #FFFFFF;
-    animation: fadeIn linear 2;
-    -webkit-animation: fadeIn linear 2s;
+    transition: opacity 500ms linear;
 }   
 
 #tracker {
@@ -188,6 +187,11 @@ p.scen {
         margin: 3px;
     }
 }
+
+ul > button:focus {
+    background-color: #c696daf1;
+}
+
 p.cont {
     position: absolute;
     width: 413px;
@@ -230,10 +234,10 @@ h3.controls {
     border: 1px solid #FFFFFF;
 }
 
-ul.controls {
+div.controls {
     position: absolute;
     top: 916px;
-    left: 46px;
+    left: 86px;
 
 }
 
@@ -275,7 +279,7 @@ a {
     padding-top: 10px;
 }
 
-div { 
+div.main { 
     position: absolute;
     width: 490px;
     height: 1200px;
