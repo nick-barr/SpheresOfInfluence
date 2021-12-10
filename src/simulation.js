@@ -1,7 +1,9 @@
 import Sphere from './spheres.js';
 
-export default function Simulation(canvas) {
-    this.canvas = canvas;
+export default class Simulation {
+    constructor (canvas) {
+        this.canvas = canvas;
+    }
 }
 
     Simulation.prototype.runCovid = function (arr) {

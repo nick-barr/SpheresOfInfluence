@@ -1,4 +1,4 @@
-import { resolveCollision } from "./collision.js"
+import { particleCollision } from "./collision.js"
 
 export default class Sphere {
     constructor (x, y, dx, dy, radius, canvas) {
@@ -32,7 +32,7 @@ export default class Sphere {
         for (let i = 0; i < arr.length; i++) {
             if (this === arr[i]) continue;
             if (distance(this.x, this.y, arr[i].x, arr[i].y) - this.radius - arr[i].radius < 0) {
-                resolveCollision(this, arr[i]);
+                particleCollision(this, arr[i]);
                 
                 if (this.color === "firebrick" && arr[i].color === "lightgray") {
                     arr[i].color = "firebrick";
@@ -69,7 +69,7 @@ export default class Sphere {
         for (let i = 0; i < arr.length; i++) {
             if (this === arr[i]) continue;
             if (distance(this.x, this.y, arr[i].x, arr[i].y) - this.radius - arr[i].radius < 0) {
-                resolveCollision(this, arr[i]);
+                particleCollision(this, arr[i]);
                 if (this.radius === 30 && arr[i].radius === 30) continue;
                 if (this.color === "darkred" && arr[i].color !== "darkred") {
                     arr[i].color = "firebrick";}
@@ -110,7 +110,7 @@ export default class Sphere {
 
             if (this === arr[i]) continue;
             if (distance(this.x, this.y, arr[i].x, arr[i].y) - this.radius - arr[i].radius < 0) {
-                resolveCollision(this, arr[i]);
+                particleCollision(this, arr[i]);
                 let thisIdea = COLORS[Math.floor(Math.random()*COLORS.length)];
                 this.color = thisIdea;
                 arr[i].color = thisIdea;

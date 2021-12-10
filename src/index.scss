@@ -11,7 +11,6 @@ body {
 
 }
 
-
 h1 {
     position: absolute;
     width: 413px;
@@ -44,7 +43,7 @@ h3 {
     width: 413px;
     height: 28px;
     left: 46px;
-    top: 485px;
+    top: 465px;
 
     font-family: Helvetica;
     font-style: normal;
@@ -52,6 +51,21 @@ h3 {
     font-size: 24px;
     line-height: 28px;
 
+    color: #FFFFFF;
+}
+p.scen {
+    position: absolute;
+    width: 413px;
+    height: 28px;
+    left: 170px;
+    top: 485px;
+
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: light;
+    font-size: 12px;
+    line-height: 19px;
+    
     color: #FFFFFF;
 }
 
@@ -69,18 +83,17 @@ h3 {
     width: 383px;
     height: 0px;
     left: 46px;
-    top: 540px;
+    top: 520px;
 
     border: 1px solid #FFFFFF;
 }
-
 
 #intro {
     position: absolute;
     width: 380px;
     height: 171px;
     left: 46px;
-    top: 240px;
+    top: 220px;
     
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-style: normal;
@@ -95,7 +108,7 @@ h3 {
     width: 380px;
     height: 171px;
     left: 46px;
-    top: 390px;
+    top: 370px;
     
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-style: normal;
@@ -144,40 +157,23 @@ h3 {
 
 #active {
     opacity: 1;
-    animation: fadeIn linear 1000ms;
-    -webkit-animation: fadeIn linear 1000ms;
+    transition: opacity 500ms linear;
+
+    // animation: fadeIn linear 1000ms;
+    // -webkit-animation: fadeIn linear 1000ms;
 }
 
 #inactive {
     opacity: .5;
+    transition: opacity 500ms linear;
 }
 
-#invisible {
-    opacity: 0;
-}
-
-.floatreset {
-    position: absolute;
-    top: 550px;
-    left: 1180px;
-}
-p.floatreset {
-    position: absolute;
-    display:inline-block;
-    font-family: helvetica;
-    top: 590px;
-    left: 1170px;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-
-ul {
+#features {
     position: absolute;
     width: 110px;
     height: 19px;
     left: 46px;
-    top: 571px;
+    top: 551px;
     padding-bottom: 25px;
 
     
@@ -187,20 +183,69 @@ ul {
     font-size: 16px;
     line-height: 19px;
     color: #FFFFFF;
+    
+    li {
+        margin: 3px;
+    }
+}
+p.cont {
+    position: absolute;
+    width: 413px;
+    height: 28px;
+    left: 155px;
+    top: 850px;
+
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: light;
+    font-size: 12px;
+    line-height: 19px;
+    
+    color: #FFFFFF;
 }
 
+h3.controls {
+    position: absolute;
+    width: 413px;
+    height: 28px;
+    left: 46px;
+    top: 830px;
 
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
 
-li {
-    margin: 3px;
+    color: #FFFFFF;
 }
 
-#simStart{
-    background-color: #15772ef1;
+#hr3 {
+    position: absolute;
+    width: 383px;
+    height: 0px;
+    left: 46px;
+    top: 885px;
+
+    border: 1px solid #FFFFFF;
 }
-#simReset{
-    background-color: #a51515f1;
+
+ul.controls {
+    position: absolute;
+    top: 916px;
+    left: 46px;
+
 }
+
+    #simStart{
+        background-color: #15772ef1;
+        top: 940px;
+    }
+
+    #simReset{
+        background-color: #a51515f1;
+    }
+
 button {
     box-shadow: 2px 3px #888888;
     background-color: #550077f1;

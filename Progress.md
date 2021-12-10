@@ -35,3 +35,6 @@ I used inspiration from asteroids and pathfinder to pull this together.
 
 - Updated CSS further
 - Split animate function, simulation run, and sphere update functions into their own functions.
+- Updated onclick buttons to match scenarios and used selectors to change certain animations. 
+- Added start/stop simulation functions.
+- Split out specific sphereArray modifications to match scenario being run.

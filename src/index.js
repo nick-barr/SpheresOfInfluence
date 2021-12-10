@@ -1,6 +1,4 @@
-import Sphere from './spheres.js';
 import Simulation from './simulation.js';
-
 
 document.addEventListener("DOMContentLoaded", function () {
     const canvasMain = document.querySelector(".canvasMain");
@@ -13,24 +11,15 @@ document.addEventListener("DOMContentLoaded", function () {
     let uninfected = 0
     let infected = 0
     let recovered = 0
-    let simVersion = console.log("Choose a scenario!");
+    let simVersion = 0;
 
     function animate() {
         let requestID = requestAnimationFrame(animateCovid);
-        console.log(requestID)
-        ctx.clearRect(0, 0, innerWidth, innerHeight);
         sim.runCovid(sphereArray);   
-             
-        if (sphereArray.every(el => el.color === "firebrick")) cancelAnimationFrame(requestID);
-        if (sphereArray.every(el => el.color !== "firebrick")) cancelAnimationFrame(requestID);
-
-        document.getElementById("simReset").onclick = function() {
-            cancelAnimationFrame(requestID);
-        };    
+        cancelAnimationFrame(requestID);
     }    
 
     animate();
-
     
     function animateCovid() {
         let requestID = requestAnimationFrame(animateCovid);
@@ -38,24 +27,22 @@ document.addEventListener("DOMContentLoaded", function () {
         ctx.clearRect(0, 0, innerWidth, innerHeight);
         sim.runCovid(sphereArray);   
              
-        // if (sphereArray.every(el => el.color === "firebrick")) cancelAnimationFrame(requestID);
-        if (sphereArray.every(el => el.color !== "firebrick")) reset();
+        // if (sphereArray.every(el => el.color !== "firebrick")) reset();
 
-
-        function reset() {
-            document.getElementById("active").id = "inactive";
-            cancelAnimationFrame(requestID)
-        }
+        // function reset() {
+        //     document.getElementById("active").id = "inactive";
+        //     cancelAnimationFrame(requestID)
+        // }
         
         document.getElementById("simReset").onclick = function() {
             cancelAnimationFrame(requestID);
             document.getElementById("active").id = "inactive";
         };    
         
-        stats();
+        statsC();
     }    
 
-    function stats () {
+    function statsC () {
         uninfected = sphereArray.filter(el => el.color === 'lightgray').length;
         infected = sphereArray.filter(el => el.color === 'firebrick').length;
         recovered = sphereArray.filter(el => el.color === 'lightgreen').length;
@@ -84,13 +71,13 @@ document.addEventListener("DOMContentLoaded", function () {
         infected = sphereArray.filter(el => el.color === 'firebrick').length;
         recovered = sphereArray.filter(el => el.color === 'lightgray').length;
 
-        document.getElementById("uninfected").innerHTML = "TEAM BLUE: " + uninfected;
-        document.getElementById("infected").innerHTML = "TEAM RED: " + infected;
-        document.getElementById("recovered").innerHTML = "SWINGERS: " + recovered;
+        document.getElementById("uninfected").innerHTML = "BLUE TEAM: " + uninfected;
+        document.getElementById("infected").innerHTML = "RED TEAM: " + infected;
+        document.getElementById("recovered").innerHTML = "NEUTRAL: " + recovered;
     };
+
     function animateIdeas() {
         let requestID = requestAnimationFrame(animateIdeas);
-        console.log(requestID)
         ctx.clearRect(0, 0, innerWidth, innerHeight);
         sim.runIdeas(sphereArray);   
              
@@ -109,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     document.getElementById("covid").onclick = function() {
-        document.getElementById("description").innerHTML = "The speed that COVID-19 has spread is beyond what most would imagine. Observe how patient zero reaches the rest of the objects."
+        document.getElementById("description").innerHTML = "The speed that COVID-19 has spread is beyond what most would imagine. Observe how patient zero affects the rest of the population."
 
         sphereArray = sim.spheres();
         sim.covidSphereUpdate(sphereArray);
@@ -117,17 +104,16 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     document.getElementById("quarantine").onclick = function() {
-        document.getElementById("description").innerHTML = "Lockdowns imposed by governments help reduce the spread of COVID-19 but this is not always possible."
+        document.getElementById("description").innerHTML = "Lockdowns imposed by governments help reduce the spread of COVID-19, but is not possible for extended periods of time."
 
         sphereArray = null;
         sphereArray = sim.spheres();
         sim.quarantineSphereUpdate(sphereArray);
         simVersion = animateCovid;
-        
     };
     
     document.getElementById("political").onclick = function() {
-        document.getElementById("description").innerHTML = "Political parties have enormous influence on their governed population as parties build and propogate on ideas central to their agenda."
+        document.getElementById("description").innerHTML = "Political parties have enormous influence on their governed population as parties build and propogate ideas central to their political agenda."
 
         sphereArray = sim.spheres();
         sim.politicsSphereUpdate(sphereArray);

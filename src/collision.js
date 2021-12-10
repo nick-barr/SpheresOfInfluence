@@ -1,5 +1,5 @@
 
-    export const resolveCollision = (particle, otherParticle) => {
+    export const particleCollision = (particle, otherParticle) => {
         const xVelocityDiff = particle.dx - otherParticle.dx;
         const yVelocityDiff = particle.dy - otherParticle.dy;
 
@@ -40,5 +40,3 @@
 
         }
     }
-
-//refactored to capply to my code. This math is next level.
