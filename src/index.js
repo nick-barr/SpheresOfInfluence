@@ -2,9 +2,9 @@ import Simulation from './simulation.js';
 
 document.addEventListener("DOMContentLoaded", function () {
     const canvasMain = document.querySelector(".canvasMain");
-    canvasMain.width = innerWidth * .7;
-    canvasMain.height = innerHeight * .6;
     const ctx = canvasMain.getContext("2d");    
+    canvasMain.width = window.innerWidth * .7;
+    canvasMain.height = window.innerHeight * .6;
     let sim = new Simulation(canvasMain);
     let sphereArray = sim.spheres();
 
@@ -12,6 +12,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let infected = 0
     let recovered = 0
     let simVersion = 0;
+
+    // function draw() {
+
+    // }
 
     function animate() {
         let requestID = requestAnimationFrame(animateCovid);

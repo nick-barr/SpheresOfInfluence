@@ -18,8 +18,10 @@ body {
 
 //user controls
 div.control-container { 
-    width: 45%;
-    height: 100%;
+    width: 35vw;
+    min-width: 350px;
+    max-width: 400px;
+    height: 100vh;
     z-index:3;
 
     background: linear-gradient(107.86deg, #622774 1.88%, #C53364 100%);
@@ -27,18 +29,31 @@ div.control-container {
     font-family: Helvetica;
     font-style: normal;
     font-weight: bold;
+
+    .control-container__sub{
+        height: 100%;
+        width: 100%;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-y: scroll;
+        // align-content: center;
+        // justify-content: center;
+        // border: 3px solid pink;
+    }
 }
 
 
 //control-container stuff
 h1 {
-    width: 100%;
+    width: 85%;
     height: auto;
     z-index: 1;
     
     color: #ffffff;
 
-    font-size: 6vw;
+    font-size: 5vw;
     animation: fadeIn linear 2;
     -webkit-animation: fadeIn linear 2s;
 }
@@ -54,7 +69,7 @@ h1 {
     }
 
 h3 {
-    width: 100%;
+    width: 85%;
     
     color: #FFFFFF;
 
@@ -63,7 +78,7 @@ h3 {
 }
 
 p.scen {
-    width: 100%;
+    width: 85%;
 
     color: #FFFFFF;
 
@@ -73,12 +88,12 @@ p.scen {
 }
 
 hr {
-    width: 95%;
+    width: 90%;
     border: 1px solid #FFFFFF;
 }
 
 #intro {
-    width: 100%;
+    width: 85%;
     
     font-weight: light;
     font-size: 16px;
@@ -86,7 +101,7 @@ hr {
     color: #FFFFFF;
 }   
 #description {
-    width: 100%;
+    width: 85%;
     
     font-size: 16px;
     line-height: 19px;
@@ -98,7 +113,7 @@ hr {
 
 
 #features {
-    width: 100%;
+    width: 85%;
     padding: 0px;    
     font-family: Roboto;
     font-size: 16px;
@@ -107,14 +122,12 @@ hr {
     
 }
 
-ul > button:focus {
-    width: 100%;
+div > button:focus {
     background-color: #c696daf1;
 }
 
 p.cont {
-    // position: absolute;
-    width: 100%;
+    width: 85%;
 
     font-weight: light;
     font-size: 12px;
@@ -122,17 +135,10 @@ p.cont {
     color: #FFFFFF;
 }
 
-h3.controls {
-    // position: absolute;
-    width: 100%;
-
+.controls {
+    width: 85%;
     font-weight: bold;
-    // font-size: 24px;
-
     color: #FFFFFF;
-}
-
-div.controls {
     #simStart{
         background-color: #15772ef1;
     }
@@ -153,15 +159,16 @@ button {
     display: inline-block;
     font-size: 14px;
     // margin: 2px 2px;
-    width: 100%;
+    width: 75%;
     border-radius: 8px;
+    
 }
 
 button:active {
     background-color: #7700a7f1;
     box-shadow: 0 5px #4e4e4e;
     transform: translateY(4px);
-  }
+}
 
   //canvas and footer
 .body-content{
@@ -174,6 +181,7 @@ button:active {
     #tracker {
         list-style-type: none;
         height: 50px;
+        width: auto;
         // position: absolute;
         // top: 142px;
         top: 10vh;
@@ -181,6 +189,7 @@ button:active {
         font-size: 12px;
         font-weight:600;
         color: #616161;
+        margin-left: 10%;
 
         #uninfected {
             color:gray;
@@ -214,17 +223,17 @@ button:active {
         opacity: .5;
         transition: opacity 500ms linear;
     }
-}
 
   //footer stuff
   footer{
     display: flex;
     justify-content: flex-end;
-    flex-direction:row;
     
-    a {
-        padding-right: 10px;
-        padding-top: 10px;
+        a {
+            // padding-right: 10px;
+            // padding-top: 10px;
+            margin: 1%;
+        }
     }
 }
 

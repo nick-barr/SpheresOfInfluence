@@ -28,6 +28,7 @@
     <script src="./dist/main.js"></script>
     
     <div class="control-container">
+    <div class="control-container__sub">
         <h1>Spheres of Influence</h1>
         <hr id="hr1">
         <p id="intro">This is a data simulation meant to visualize how closely connected we are to one another. Individuals can reach farther than the immediate surrounding they interact with. This simlulation gives a few examples of our interactions. Ultimately, I hope this demonstration gives an understanding of our own sphere of influence.</p>
@@ -36,20 +37,20 @@
         <h3>Scenarios</h3>
         <p class="scen">Choose before starting a simlulation</p>
         
-        <ul id="features">
-            <button id="covid">COVID-19</button><br><br>
-            <button id="quarantine">COVID-19: Lockdown</button><br><br>
-            <button id="political">Political Influence</button><br><br>
-            <button id="ideas">Ideas</button><br><br>
-        </ul>
+        <div id="features">
+            <button id="covid">COVID-19</button>
+            <button id="quarantine">COVID-19: Lockdown</button>
+            <button id="political">Political Influence</button>
+            <button id="ideas">Ideas</button>
+        </div>
         
         <hr id="hr3">
         
         <h3 class="controls">Controls</h3>
         <p class="cont">Fully pause before selecting & starting a new scenario</p>
         <div class="controls">
-            <button id="simStart">Start / Speed Up</button><br><br>
-            <button id="simReset">Pause / Slowdown</button><br><br>
+            <button id="simStart">Start / Speed Up</button>
+            <button id="simReset">Pause / Slowdown</button>
         </div>
 
         <!-- <a href>
@@ -58,8 +59,9 @@
         </a>
         <p class="floatreset" id="inactive"> Select
             Scenario</p> -->
-
     </div>
+    </div>
+    
     <div class="body-content">
         <footer>
             <a href="https://www.linkedin.com/in/nicholas-barrameda/">
@@ -77,7 +79,7 @@
             <li id="infected"></li>
             <li id="recovered"></li>
         </ul>
-        
+
         <canvas class="canvasMain" id="inactive"></canvas>
 
         
