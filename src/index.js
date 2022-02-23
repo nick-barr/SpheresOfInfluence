@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     function animateCovid() {
         let requestID = requestAnimationFrame(animateCovid);
-        console.log(requestID)
+        // console.log(requestID)
         ctx.clearRect(0, 0, innerWidth, innerHeight);
         sim.runCovid(sphereArray);   
              
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function animatePolitics() {
         let requestID = requestAnimationFrame(animatePolitics);
-        console.log(requestID)
+        // console.log(requestID)
         ctx.clearRect(0, 0, innerWidth, innerHeight);
         sim.runPolitics(sphereArray);   
              
