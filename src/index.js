@@ -1,9 +1,27 @@
 import Simulation from './simulation.js';
 
 document.addEventListener("DOMContentLoaded", function () {
+
+    function viewWidthCalc(width){
+        let subWidth = width * .35;
+        let calcWidth = width;
+
+        switch(subWidth) {
+            case subWidth >= 400:
+              subWidth = 400;
+              return calcWidth - subWidth;
+            case subWidth <= 350:
+              subWidth = 350;
+              return calcWidth - subWidth;
+            default:
+              return calcWidth - subWidth;
+          }
+    }
+    
     const canvasMain = document.querySelector(".canvasMain");
     const ctx = canvasMain.getContext("2d");    
-    canvasMain.width = window.innerWidth * .7;
+    // canvasMain.width = window.innerWidth * .7;
+    canvasMain.width = viewWidthCalc(innerWidth);
     canvasMain.height = window.innerHeight * .6;
     let sim = new Simulation(canvasMain);
     let sphereArray = sim.spheres();
@@ -16,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // function draw() {
 
     // }
+    
 
     function animate() {
         let requestID = requestAnimationFrame(animateCovid);

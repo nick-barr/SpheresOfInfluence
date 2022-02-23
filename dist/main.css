@@ -2,7 +2,7 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
 body {
-  background: #0b6e75;
+  background: linear-gradient(105.86deg, #ffffff 80%, #cccccc 100%);
   height: 100%;
   width: 100%;
   margin: 0;
@@ -31,15 +31,15 @@ div.control-container .control-container__sub {
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-y: scroll;
 }
 
 h1 {
   width: 85%;
   height: auto;
+  max-height: 250px;
   z-index: 1;
   color: #ffffff;
-  font-size: 5vw;
+  font-size: 4vmax;
   animation: fadeIn linear 2;
   -webkit-animation: fadeIn linear 2s;
 }
@@ -60,20 +60,6 @@ h1 {
     opacity: 1;
   }
 }
-h3 {
-  width: 85%;
-  color: #FFFFFF;
-  font-weight: bold;
-  font-size: 24px;
-}
-
-p.scen {
-  width: 85%;
-  color: #FFFFFF;
-  font-weight: light;
-  font-size: 12px;
-}
-
 hr {
   width: 90%;
   border: 1px solid #FFFFFF;
@@ -81,7 +67,7 @@ hr {
 
 #intro {
   width: 85%;
-  font-weight: light;
+  font-weight: 300;
   font-size: 16px;
   color: #FFFFFF;
 }
@@ -94,61 +80,10 @@ hr {
   transition: opacity 500ms linear;
 }
 
-#features {
-  width: 85%;
-  padding: 0px;
-  font-family: Roboto;
-  font-size: 16px;
-  color: #FFFFFF;
-}
-
-div > button:focus {
-  background-color: #c696daf1;
-}
-
-p.cont {
-  width: 85%;
-  font-weight: light;
-  font-size: 12px;
-  color: #FFFFFF;
-}
-
-.controls {
-  width: 85%;
-  font-weight: bold;
-  color: #FFFFFF;
-}
-.controls #simStart {
-  background-color: #15772ef1;
-}
-.controls #simReset {
-  background-color: #a51515f1;
-}
-
-button {
-  box-shadow: 2px 3px #888888;
-  background-color: #550077f1;
-  border: none;
-  color: white;
-  padding: 12px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
-  width: 75%;
-  border-radius: 8px;
-}
-
-button:active {
-  background-color: #7700a7f1;
-  box-shadow: 0 5px #4e4e4e;
-  transform: translateY(4px);
-}
-
 .body-content {
   display: flex;
   flex-direction: column;
-  width: auto;
+  width: 100%;
   height: 100vh;
 }
 .body-content #tracker {
@@ -156,11 +91,11 @@ button:active {
   height: 50px;
   width: auto;
   top: 10vh;
-  font-family: sans-serif;
+  font-family: Helvetica;
   font-size: 12px;
   font-weight: 600;
   color: #616161;
-  margin-left: 10%;
+  padding-left: 10%;
 }
 .body-content #tracker #uninfected {
   color: gray;
@@ -177,6 +112,7 @@ button:active {
   background: #ffffff93;
   margin: 10%;
   margin-top: 0;
+  margin-bottom: 0;
 }
 .body-content #active {
   opacity: 1;
@@ -185,6 +121,84 @@ button:active {
 .body-content #inactive {
   opacity: 0.5;
   transition: opacity 500ms linear;
+}
+.body-content .body-controls-container {
+  display: flex;
+  padding-left: 10%;
+}
+.body-content .body-controls-container .scenario-container {
+  width: 65%;
+}
+.body-content .body-controls-container .controls-container {
+  width: 35%;
+}
+.body-content h3, .body-content .scen, .body-content .cont {
+  margin: 0;
+}
+.body-content h3 {
+  width: 85%;
+  color: #2e2e2e;
+  font-weight: bold;
+  font-size: 24px;
+  height: auto;
+}
+.body-content p.scen {
+  width: 85%;
+  color: #2e2e2e;
+  font-weight: light;
+  font-size: 12px;
+}
+.body-content .scenarios {
+  width: 100%;
+  padding: 0px;
+  font-family: Helvetica;
+  font-size: 16px;
+  color: #2e2e2e;
+  display: flex;
+  flex-wrap: wrap;
+}
+.body-content .scenarios button {
+  width: 40%;
+  height: 7vh;
+}
+.body-content div > button:focus {
+  background-color: #c696daf1;
+}
+.body-content p.cont {
+  width: 85%;
+  font-weight: light;
+  font-size: 12px;
+  color: #2e2e2e;
+}
+.body-content .controls {
+  width: 85%;
+  font-weight: bold;
+  color: #2e2e2e;
+}
+.body-content .controls #simStart {
+  background-color: #15772ef1;
+}
+.body-content .controls #simReset {
+  background-color: #a51515f1;
+}
+.body-content button {
+  box-shadow: 2px 3px #888888;
+  background-color: #550077f1;
+  border: none;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  width: 75%;
+  margin: 10px;
+  border-radius: 8px;
+}
+.body-content button:active {
+  background-color: #7700a7f1;
+  box-shadow: 0 5px #4e4e4e;
+  transform: translateY(4px);
 }
 .body-content footer {
   display: flex;

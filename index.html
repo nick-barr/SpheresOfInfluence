@@ -33,26 +33,8 @@
         <hr id="hr1">
         <p id="intro">This is a data simulation meant to visualize how closely connected we are to one another. Individuals can reach farther than the immediate surrounding they interact with. This simlulation gives a few examples of our interactions. Ultimately, I hope this demonstration gives an understanding of our own sphere of influence.</p>
         <p id="description"></p>
-        <hr id="hr2">
-        <h3>Scenarios</h3>
-        <p class="scen">Choose before starting a simlulation</p>
+        <!-- <hr id="hr2"> -->
         
-        <div id="features">
-            <button id="covid">COVID-19</button>
-            <button id="quarantine">COVID-19: Lockdown</button>
-            <button id="political">Political Influence</button>
-            <button id="ideas">Ideas</button>
-        </div>
-        
-        <hr id="hr3">
-        
-        <h3 class="controls">Controls</h3>
-        <p class="cont">Fully pause before selecting & starting a new scenario</p>
-        <div class="controls">
-            <button id="simStart">Start / Speed Up</button>
-            <button id="simReset">Pause / Slowdown</button>
-        </div>
-
         <!-- <a href>
             <img class="floatreset" id="inactive" src="http://cdn.onlinewebfonts.com/svg/img_130208.png"
             width="50" height="50">
@@ -81,6 +63,28 @@
         </ul>
 
         <canvas class="canvasMain" id="inactive"></canvas>
+
+        <div class="body-controls-container">
+            <div class="scenario-container">
+              <h3>Scenarios</h3>
+              <p class="scen">Choose before starting a simlulation</p>
+              <div class="scenarios">
+                  <button id="covid">COVID-19</button>
+                  <button id="quarantine">COVID-19: Lockdown</button>
+                  <button id="political">Political Influence</button>
+                <button id="ideas">Ideas</button>
+              </div>
+            </div>
+            
+            <div class="controls-container">
+              <h3 class="controls">Controls</h3>
+              <p class="cont">Fully pause before selecting & starting a new scenario</p>
+              <div class="controls">
+                  <button id="simStart">Start / Speed Up</button>
+                  <button id="simReset">Pause / Slowdown</button>
+              </div>
+            </div>
+        </div>
 
         
     </div>
