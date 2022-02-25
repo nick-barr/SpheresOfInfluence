@@ -31,11 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
     let recovered = 0
     let simVersion = 0;
 
-    // function draw() {
-
-    // }
-    
-
     function animate() {
         let requestID = requestAnimationFrame(animateCovid);
         sim.runCovid(sphereArray);   
@@ -45,11 +40,14 @@ document.addEventListener("DOMContentLoaded", function () {
     animate();
     
     function animateCovid() {
+        
+        
         let requestID = requestAnimationFrame(animateCovid);
         // console.log(requestID)
         ctx.clearRect(0, 0, innerWidth, innerHeight);
         sim.runCovid(sphereArray);   
-             
+
+
         // if (sphereArray.every(el => el.color !== "firebrick")) reset();
 
         // function reset() {
