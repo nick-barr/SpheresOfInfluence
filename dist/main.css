@@ -87,7 +87,13 @@ hr {
   height: 100vh;
   overflow-y: auto;
 }
-.body-content #tracker {
+.body-content .top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+}
+.body-content .top-bar #tracker {
   list-style-type: none;
   height: 45px;
   font-family: Helvetica;
@@ -97,18 +103,25 @@ hr {
   padding-left: 10%;
   max-width: 500px;
 }
-.body-content #tracker li {
+.body-content .top-bar #tracker li {
   height: 15px;
   max-width: 500px;
 }
-.body-content #tracker #uninfected {
+.body-content .top-bar #tracker #uninfected {
   color: gray;
 }
-.body-content #tracker #infected {
+.body-content .top-bar #tracker #infected {
   color: firebrick;
 }
-.body-content #tracker #recovered {
+.body-content .top-bar #tracker #recovered {
   color: green;
+}
+.body-content .top-bar footer {
+  display: flex;
+  justify-content: flex-end;
+}
+.body-content .top-bar footer a {
+  padding: 10px;
 }
 .body-content .canvasMain {
   border-style: solid;
@@ -208,11 +221,4 @@ hr {
   background-color: #7700a7f1;
   box-shadow: 0 5px #4e4e4e;
   transform: translateY(4px);
-}
-.body-content footer {
-  display: flex;
-  justify-content: flex-end;
-}
-.body-content footer a {
-  margin: 1%;
 }

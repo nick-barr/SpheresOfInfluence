@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const ctx = canvasMain.getContext("2d");    
     // canvasMain.width = window.innerWidth * .7;
     canvasMain.width = viewWidthCalc(innerWidth);
-    canvasMain.height = window.innerHeight * .55;
+    canvasMain.height = window.innerHeight * .6;
     let sim = new Simulation(canvasMain);
     let sphereArray = sim.spheres();
 

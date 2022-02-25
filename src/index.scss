@@ -97,32 +97,48 @@ hr {
     height: 100vh;
     overflow-y: auto;
 
-    // infected counter 
-    #tracker {
-        list-style-type: none;
-        height: 45px;
-        // width: 100%;
-        font-family: Helvetica;
-        font-size: 12px;
-        font-weight:600;
-        color: #616161;
-        padding-left: 10%;
-        max-width: 500px;
+    .top-bar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 10vh;
 
-        li {
-            height: 15px;
+        // infected counter 
+        #tracker {
+            list-style-type: none;
+            height: 45px;
+            // width: 100%;
+            font-family: Helvetica;
+            font-size: 12px;
+            font-weight:600;
+            color: #616161;
+            padding-left: 10%;
             max-width: 500px;
+
+            li {
+                height: 15px;
+                max-width: 500px;
+            }
+            #uninfected {
+                color:gray;
+            }
+            #infected {
+                color: firebrick;
+            }
+            #recovered {
+                color: green;
+            }
         }
-        #uninfected {
-            color:gray;
-        }
-        #infected {
-            color: firebrick;
-        }
-        #recovered {
-            color: green;
+
+        //footer stuff
+        footer{
+            display: flex;
+            justify-content: flex-end;
+            
+            a {padding: 10px;}
         }
     }
+    
 
     //canvas 
     .canvasMain {
@@ -207,8 +223,6 @@ hr {
         }
     }
     
-    
-    
     div > button:focus {
         background-color: #c696daf1;
     }
@@ -250,15 +264,6 @@ hr {
         transform: translateY(4px);
     }
 
-  //footer stuff
-  footer{
-    display: flex;
-    justify-content: flex-end;
-    
-        a {
-            margin: 1%;
-        }
-    }
 }
 
 
