@@ -20,7 +20,7 @@ This project was built using vanilla Javascript, Canvas, HTML, and CSS. Canvas i
 
 # Features & Usage
 
-## Useage
+## Usage
 In order to run a successful simulation, visitors must take the following actions:
 
 1. Ensure no there is no movement on the canvas. If there is, use the Pause / Slowdown button until all movement has stopped on the canvas.
