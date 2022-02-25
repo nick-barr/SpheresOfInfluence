@@ -13,7 +13,6 @@ body {
 
     display: flex;
     justify-content: row;
-
 }
 
 //user controls
@@ -96,23 +95,24 @@ hr {
     flex-direction: column;
     width: 100%;
     height: 100vh;
+    overflow-y: auto;
 
     // infected counter 
     #tracker {
         list-style-type: none;
-        height: 50px;
-        width: auto;
-        // position: absolute;
-        // top: 142px;
-        top: 10vh;
+        height: 45px;
+        // width: 100%;
         font-family: Helvetica;
         font-size: 12px;
         font-weight:600;
         color: #616161;
-        // margin-left: 10%;
         padding-left: 10%;
+        max-width: 500px;
 
-
+        li {
+            height: 15px;
+            max-width: 500px;
+        }
         #uninfected {
             color:gray;
         }
@@ -131,7 +131,7 @@ hr {
         background: #ffffff93;
         margin: 10%;
         margin-top: 0;
-        margin-bottom: 0;
+        margin-bottom: 3%;
     }
 
     #active {
@@ -149,8 +149,12 @@ hr {
 
     .body-controls-container{
         display: flex;
-        // border: 1px solid red;
+        // padding-bottom: 10%;
         padding-left: 10%;
+        padding-right: 10%;
+        height: auto;
+        
+
         .scenario-container{
             width: 65%;
         }
@@ -159,8 +163,16 @@ hr {
         }
     }
     
-    h3, .scen, .cont{
+    .scenario-words, .controls-words{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 60px;
+    }
+    h3, .scenario-description, .controls-description{
         margin: 0;
+        width: 100%;
+        font-family: Helvetica;
     }
 
     h3 {
@@ -171,8 +183,8 @@ hr {
         height: auto;
     }
 
-    p.scen {
-        width: 85%;
+    .scenario-description, .controls-description {
+        // width: 85%;
         color: #2e2e2e;
         font-weight: light;
         font-size: 12px;
@@ -191,6 +203,7 @@ hr {
         button {
             width: 40%;
             height: 7vh;
+            max-height: 45px;
         }
     }
     
@@ -200,17 +213,8 @@ hr {
         background-color: #c696daf1;
     }
     
-    p.cont {
-        width: 85%;
-        
-        font-weight: light;
-        font-size: 12px;
-        
-        color: #2e2e2e;
-    }
-    
     .controls {
-        width: 85%;
+        width: 100%;
         font-weight: bold;
         color: #2e2e2e;
         #simStart{
@@ -233,7 +237,8 @@ hr {
         display: inline-block;
         font-size: 14px;
         // margin: 2px 2px;
-        width: 75%;
+        width: 80%;
+        height: 45px;
         margin: 10px;
         border-radius: 8px;
         
@@ -251,8 +256,6 @@ hr {
     justify-content: flex-end;
     
         a {
-            // padding-right: 10px;
-            // padding-top: 10px;
             margin: 1%;
         }
     }
