@@ -5,7 +5,7 @@
 
 This data simulation is meant to visualize the virality of ideas and interactions between people. As social beings, the extent that we reach one another is typically larger than expected. This simluation ultimately aims to show how our daily decisions affect our surrounding environment, in other words, our Sphere of Influence.
 
-![landing page](https://github.com/nick-barr/jsProjectCovid/blob/main/src/assets/soi_thumb.png)
+![landing page](https://github.com/nick-barr/jsProjectCovid/blob/main/src/assets/SOI-thumb.png)
 
 # Technologies
 
