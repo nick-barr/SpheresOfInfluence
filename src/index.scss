@@ -221,11 +221,12 @@ hr {
             height: 7vh;
             max-height: 45px;
         }
-    }
-    
-    div > button:focus {
-        background-color: #c696daf1;
-    }
+
+        .active {
+            background-color: #c233fff1;
+            font-weight: 700;
+        }
+    }    
     
     .controls {
         width: 100%;
@@ -237,6 +238,10 @@ hr {
         
         #simReset{
             background-color: #a51515f1;
+        }
+
+        .inactive {
+            background-color: #8b8b8bf1;
         }
     }
     

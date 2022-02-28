@@ -188,8 +188,9 @@ hr {
   height: 7vh;
   max-height: 45px;
 }
-.body-content div > button:focus {
-  background-color: #c696daf1;
+.body-content .scenarios .active {
+  background-color: #c233fff1;
+  font-weight: 700;
 }
 .body-content .controls {
   width: 100%;
@@ -201,6 +202,9 @@ hr {
 }
 .body-content .controls #simReset {
   background-color: #a51515f1;
+}
+.body-content .controls .inactive {
+  background-color: #8b8b8bf1;
 }
 .body-content button {
   box-shadow: 2px 3px #888888;
