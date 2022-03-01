@@ -42,11 +42,8 @@ document.addEventListener("DOMContentLoaded", function () {
     animate();
     
     function animateCovid() {
-<<<<<<< HEAD
-=======
 
         
->>>>>>> buglist
         let requestID = requestAnimationFrame(animateCovid);
         // console.log(requestID)
         ctx.clearRect(0, 0, innerWidth, innerHeight);

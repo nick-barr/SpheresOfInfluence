@@ -25,14 +25,13 @@ In order to run a successful simulation, visitors must take the following action
 
 1. Ensure no there is no movement on the canvas. If there is, use the Pause / Slowdown button until all movement has stopped on the canvas.
 2. Select a scenario.
-3. Press the Start / Speed Up button to begin scenario. Continue to press to speed up movement and use the Pause / Slowdown to reverse speed. 
+3. Press Start or Pause button to run or stop a scenario.
 
 The simulation that runs within the canvas uses an array of sphere objects with unique properties to demonstrate one of four given scenarios. Spheres use collision detection to "bounce" off of the boundaries of the canvas and other spheres. Once a collision occurs, conditionals manipulate the attributes of the colliding spheres. 
 
 ## Features
 * Ability to choose between scenarios
 * Start and reset the simulation
-* Speed up / slowdown simulation
 * Collision logic & setTimeout properties
 
 ![simulation demo](https://github.com/nick-barr/jsProjectCovid/blob/main/src/assets/soi_covid_demo.gif)
