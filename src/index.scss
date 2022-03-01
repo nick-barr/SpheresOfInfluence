@@ -221,22 +221,29 @@ hr {
             height: 7vh;
             max-height: 45px;
         }
-    }
-    
-    div > button:focus {
-        background-color: #c696daf1;
-    }
+
+        .active {
+            background-color: #b302fff1;
+            font-weight: 700;
+            box-shadow: 0 5px #4e4e4e;
+            // transform: translateY(4px);
+        }
+    }    
     
     .controls {
         width: 100%;
         font-weight: bold;
         color: #2e2e2e;
-        #simStart{
+        .simStart{
             background-color: #15772ef1;
         }
         
-        #simReset{
+        .simReset{
             background-color: #a51515f1;
+        }
+
+        #simInactive {
+            background-color: #8b8b8bf1;
         }
     }
     
@@ -259,7 +266,7 @@ hr {
     }
     
     button:active {
-        background-color: #7700a7f1;
+        // background-color: #7700a7f1;
         box-shadow: 0 5px #4e4e4e;
         transform: translateY(4px);
     }
