@@ -189,21 +189,22 @@ hr {
   max-height: 45px;
 }
 .body-content .scenarios .active {
-  background-color: #c233fff1;
+  background-color: #b302fff1;
   font-weight: 700;
+  box-shadow: 0 5px #4e4e4e;
 }
 .body-content .controls {
   width: 100%;
   font-weight: bold;
   color: #2e2e2e;
 }
-.body-content .controls #simStart {
+.body-content .controls .simStart {
   background-color: #15772ef1;
 }
-.body-content .controls #simReset {
+.body-content .controls .simReset {
   background-color: #a51515f1;
 }
-.body-content .controls .inactive {
+.body-content .controls #simInactive {
   background-color: #8b8b8bf1;
 }
 .body-content button {
@@ -222,7 +223,6 @@ hr {
   border-radius: 8px;
 }
 .body-content button:active {
-  background-color: #7700a7f1;
   box-shadow: 0 5px #4e4e4e;
   transform: translateY(4px);
 }
