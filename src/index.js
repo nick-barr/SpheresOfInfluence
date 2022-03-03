@@ -1,3 +1,8 @@
+//things to fix
+//I need the simulations to be more dynamic. I can create an object literal of scenario things to add when a parameter is passed in
+//check if that's possible with all the dependant functions that are associated with starting a simulation
+//need to also fix the set timeouts. Maybe I should have it so hitting start resets the current simulation that is chosen? Or set the simStart click to be the thing that sets off the new parts of the canvas simulation
+
 import Simulation from './simulation.js';
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -31,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
     let recovered = 0
     let simVersion = 0;
     let simStart = null;
-    let scenarioStart = null;
 
     function animate() {
         let requestID = requestAnimationFrame(animateCovid);
